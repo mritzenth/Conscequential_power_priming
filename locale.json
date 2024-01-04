@@ -7,7 +7,35 @@
         "obs_lbl" : "Observer",
         "validate_btn": "I finished ditributing the tickets.",
         "player_tickets_add": "+",
-        "player_tickets_remove": "-"
+        "player_tickets_remove": "-",
+        "no_winners" : "No lottery winner in this round.",
+        "winning_ticket": "Ticket n°: is a winning one ! * get a prize !",
+        "thanks": [
+            "I won ! Thanks for giving me this ticket !", 
+            "Yeah ! Thank you !", 
+            "Hurrah, you're the best !",
+            "Wow, I can't believe it! Thank you so much for the ticket!",
+            "This is incredible! I never expected to win anything.",
+            "You've made my day! I'm genuinely grateful for the unexpected surprise.",
+            "What a pleasant surprise! I appreciate your generosity in sharing the ticket.",
+            "I feel like I'm in a dream right now. Thank you for this amazing gift!",
+            "This is such a pleasant shock! I can't express how thankful I am.",
+            "I owe you a big 'thank you' for bringing this unexpected joy into my life.",
+            "I'm genuinely touched by your gesture. Winning is the cherry on top!",
+            "It's amazing how a small ticket turned into such a delightful surprise.",
+            "I'm overwhelmed with gratitude. Thank you for making this possible!",
+            "I'm on cloud nine right now. Your thoughtful gift really paid off!",
+            "Luck was definitely on our side. I appreciate the good fortune you shared.",
+            "This is a moment I'll always cherish. Thank you for the wonderful gift.",
+            "I'm smiling from ear to ear! Your generosity has brought me immense joy.",
+            "I can't wait to pay it forward. Your kindness has inspired me even more.",
+            "What an unexpected blessing! Your gesture has truly brightened my day.",
+            "I'm feeling incredibly fortunate, and it's all thanks to you and that ticket.",
+            "This is a memory I'll carry with me forever. Thank you for the amazing surprise.",
+            "I'll be forever grateful for the luck you've brought into my life. Thank you!",
+            "I'm looking forward to celebrating this win with you. Let's make it memorable!"
+        ],
+        "new_round" : "New round"
     },
     "FR":{
         "lang": "Francais",
@@ -17,7 +45,11 @@
         "obs_lbl" : "",
         "validate_btn": "",
         "player_tickets_add": "",
-        "player_tickets_remove": ""
+        "player_tickets_remove": "",
+        "no_winners" : "",
+        "winning_ticket": "",
+        "thanks": [],
+        "new_round" : ""
     },
     "DE":{
         "lang": "Deutsch",
@@ -27,6 +59,10 @@
         "obs_lbl" : "",
         "validate_btn": "",
         "player_tickets_add": "",
-        "player_tickets_remove": ""
+        "player_tickets_remove": "",
+        "no_winners" : "",
+        "winning_ticket": "",
+        "thanks": [],
+        "new_round" : ""
     }
 }

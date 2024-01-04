@@ -7,7 +7,7 @@ const lang = "EN";
 const min = 18;
 const max = 67;
 const replace_char = /[123456789:]+/;
-const ticket_win_rate = 0.10; // Win rate of one ticket 
+const ticket_win_rate = 0.14; // Win rate of one ticket 
 
 // Create game participants
 participants.obs = new Object();
@@ -93,9 +93,11 @@ $.getJSON("/upload/surveys/583851/database/Names.json", function(data) {
     }
     name = name.charAt(0) + name.substring(1).toLowerCase();
     if (i < 6) {
-      $("#p_" + i + "_name").html(name); 
+      $("#p_" + i + "_name").html(name);
+      participants["p_" + i].name = name;
     } else {
       $("#obs_name").html(name);
+      participants["obs"].name = name;
     } 
   });
 });
@@ -199,4 +201,36 @@ $("#p_5_t_add").click(function(){
   }
 });
 
+// Draw the winners tickets
+$("#validate_btn").click(function(){
+  const winners = draw_winners();
+  let winning_tickets = "";
+  if (winners.length > 0) {
+    winners.forEach(function (key) {
+      if (winning_tickets !== "") winning_tickets = winning_tickets + ", ";
+      winning_tickets = winning_tickets + text.winning_ticket.replace(":", Math.floor(Math.random()*10000)).replace("*", participants[key].name);
+    });
+  } else {
+    winning_tickets = text.no_winners;
+  }
+  console.log(winning_tickets)
+  $("#winner").html(winning_tickets);
+});
 
+
+const draw_winners = function() {
+  const res = [];
+  for (const [key, value] of Object.entries(participants)) {
+    if (key !== "obs")
+    {
+      for (let i = 0; i<value.tickets; i++) {
+        if (Math.random() < ticket_win_rate) {
+          res.push(key);
+        }
+      }
+    }
+  }
+  return res;
+}
+
+// Reseting the round
