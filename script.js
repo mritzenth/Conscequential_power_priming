@@ -7,6 +7,7 @@ const lang = "EN";
 const min = 18;
 const max = 67;
 const replace_char = /[123456789:]+/;
+const ticket_win_rate = 0.10; // Win rate of one ticket 
 
 // Create game participants
 participants.obs = new Object();
@@ -44,6 +45,7 @@ for (let i = 1; i <= 6; i++) {
   let s = Math.random() > 0.5 ? "F" : "M";
   let n = Math.floor(Math.random() * 40 + 1);
   let img = s+n;
+  // Exclude images already in array and non existing src
   while (imgs.includes(img) || img === "F11" || img === "F40") {
     s = Math.random() > 0.5 ? "F" : "M";
     n = Math.floor(Math.random() * 40 + 1);
@@ -101,11 +103,16 @@ $.getJSON("/upload/surveys/583851/database/Names.json", function(data) {
 const update_values = function() {
   $("#round_infos").html(text.round_infos.replace(replace_char, round));
   $("#obs_infos").html(text.obs_infos.replace(replace_char, free_ticket));
-  $("#p_1_t_number").html(text.age.replace(replace_char, participants.p_1.tickets));
-  $("#p_2_t_number").html(text.age.replace(replace_char, participants.p_2.tickets));
-  $("#p_3_t_number").html(text.age.replace(replace_char, participants.p_3.tickets));
-  $("#p_4_t_number").html(text.age.replace(replace_char, participants.p_4.tickets));
-  $("#p_5_t_number").html(text.age.replace(replace_char, participants.p_5.tickets));
+  $("#p_1_t_number").html(participants.p_1.tickets);
+  $("#p_2_t_number").html(participants.p_2.tickets);
+  $("#p_3_t_number").html(participants.p_3.tickets);
+  $("#p_4_t_number").html(participants.p_4.tickets);
+  $("#p_5_t_number").html(participants.p_5.tickets);
+  if (free_ticket > 0) {
+    $("#validate_btn").hide();
+  } else {
+    $("#validate_btn").show();
+  }
 }
 
 // Set the buttons actions
@@ -124,3 +131,72 @@ $("#p_1_t_add").click(function(){
     update_values();
   }
 });
+
+$("#p_2_t_remove").click(function(){
+  if (participants.p_2.tickets > 0) {
+    participants.p_2.tickets--;
+    free_ticket++;
+    update_values();
+  }
+});
+
+$("#p_2_t_add").click(function(){
+  if (free_ticket > 0) {
+    participants.p_2.tickets++;
+    free_ticket--;
+    update_values();
+  }
+});
+
+
+$("#p_3_t_remove").click(function(){
+  if (participants.p_3.tickets > 0) {
+    participants.p_3.tickets--;
+    free_ticket++;
+    update_values();
+  }
+});
+
+$("#p_3_t_add").click(function(){
+  if (free_ticket > 0) {
+    participants.p_3.tickets++;
+    free_ticket--;
+    update_values();
+  }
+});
+
+
+$("#p_4_t_remove").click(function(){
+  if (participants.p_4.tickets > 0) {
+    participants.p_4.tickets--;
+    free_ticket++;
+    update_values();
+  }
+});
+
+$("#p_4_t_add").click(function(){
+  if (free_ticket > 0) {
+    participants.p_4.tickets++;
+    free_ticket--;
+    update_values();
+  }
+});
+
+
+$("#p_5_t_remove").click(function(){
+  if (participants.p_5.tickets > 0) {
+    participants.p_5.tickets--;
+    free_ticket++;
+    update_values();
+  }
+});
+
+$("#p_5_t_add").click(function(){
+  if (free_ticket > 0) {
+    participants.p_5.tickets++;
+    free_ticket--;
+    update_values();
+  }
+});
+
+
