@@ -26,6 +26,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 128px;
+  text-align: center;
 }
 
 .player_id {
@@ -76,6 +77,7 @@
   border: 2px solid #422800;
   box-shadow: #422800 4px 4px 0 0;
   color: #422800;
+  height: 40px;
 }
 
 #validate_btn:hover {
@@ -107,8 +109,8 @@
 
 @media (min-width: 768px) {
   .btn_flat {
-    min-width: 120px;
-    padding: 0 25px;
+    padding: 0 15px;
+    line-height: 0px;
   }
 }
 
