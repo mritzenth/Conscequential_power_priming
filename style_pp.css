@@ -1,0 +1,114 @@
+#power_priming {
+  display: flex;
+  flex-direction: column;
+}
+
+#observer {
+  display: flex;
+}
+
+#players {
+  display: flex;
+  justify-content: space-around;
+}
+
+#obs_infos {
+  width: 800px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player_tickets {
+  display: flex;
+  justify-content: space-evenly;
+  width: 128px;
+}
+
+.player_id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player_tickets_add {
+  background-color: darkcyan;
+  border: 2px solid darkcyan;
+  box-shadow: darkcyan 4px 4px 0 0;
+  color: azure;
+}
+
+.player_tickets_add:hover {
+  background-color: #fff;
+  color: darkcyan;
+}
+
+.player_tickets_add:active {
+  box-shadow: darkcyan 2px 2px 0 0;
+}
+
+.player_tickets_remove {
+  background-color: linen;
+  border: 2px solid firebrick;
+  box-shadow: firebrick 4px 4px 0 0;
+  color: firebrick;
+}
+
+.player_tickets_remove:hover {
+  background-color: #fff;
+}
+.player_tickets_remove:active {
+  box-shadow: firebrick 2px 2px 0 0;
+}
+
+#validate {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+
+#validate_btn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+}
+
+#validate_btn:hover {
+  background-color: #fff;
+}
+
+#validate_btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+}
+
+.btn_flat {
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn_flat:active {
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn_flat {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+

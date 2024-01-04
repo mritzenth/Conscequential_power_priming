@@ -1,0 +1,32 @@
+{
+    "EN":{
+        "lang": "English",
+        "round_infos" : "Round :/5",
+        "obs_infos": "You have : lottery tickets. Distribute all of them however you please among the participants.",
+        "age": ": years old",
+        "obs_lbl" : "Observer",
+        "validate_btn": "I finished ditributing the tickets.",
+        "player_tickets_add": "+",
+        "player_tickets_remove": "-"
+    },
+    "FR":{
+        "lang": "Francais",
+        "round_infos" : "Round",
+        "obs_infos": "",
+        "age": "",
+        "obs_lbl" : "",
+        "validate_btn": "",
+        "player_tickets_add": "",
+        "player_tickets_remove": ""
+    },
+    "DE":{
+        "lang": "Deutsch",
+        "round_infos" : "Round",
+        "obs_infos": "",
+        "age": "",
+        "obs_lbl" : "",
+        "validate_btn": "",
+        "player_tickets_add": "",
+        "player_tickets_remove": ""
+    }
+}
