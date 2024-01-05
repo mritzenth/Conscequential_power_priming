@@ -1,7 +1,7 @@
 {
     "EN":{
         "lang": "English",
-        "round_infos" : "Round :/5",
+        "round_infos" : "Round :/*",
         "obs_infos": "You have : lottery tickets. Distribute all of them however you please among the participants.",
         "age": ": years old",
         "obs_lbl" : "Observer",
@@ -9,7 +9,7 @@
         "player_tickets_add": "+",
         "player_tickets_remove": "-",
         "no_winners" : "No lottery winner in this round.",
-        "winning_ticket": "Ticket n°: is a winning one ! * get a prize !",
+        "winning_ticket": "Ticket n°: is a winning one, <b>*</b> get a prize !",
         "thanks": [
             "I won ! Thanks for giving me this ticket !", 
             "Yeah ! Thank you !", 
@@ -35,7 +35,8 @@
             "I'll be forever grateful for the luck you've brought into my life. Thank you!",
             "I'm looking forward to celebrating this win with you. Let's make it memorable!"
         ],
-        "new_round" : "New round"
+        "new_round" : "New round",
+        "finished": "You have finished this game !"
     },
     "FR":{
         "lang": "Francais",
@@ -49,7 +50,8 @@
         "no_winners" : "",
         "winning_ticket": "",
         "thanks": [],
-        "new_round" : ""
+        "new_round" : "",
+        "finished": ""
     },
     "DE":{
         "lang": "Deutsch",
@@ -63,6 +65,7 @@
         "no_winners" : "",
         "winning_ticket": "",
         "thanks": [],
-        "new_round" : ""
+        "new_round" : "",
+        "finished": ""
     }
 }
