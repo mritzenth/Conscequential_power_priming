@@ -207,14 +207,15 @@ $("#validate_btn").click(function(){
   let winning_tickets = "";
   if (winners.length > 0) {
     winners.forEach(function (key) {
-      if (winning_tickets !== "") winning_tickets = winning_tickets + ", ";
+      if (winning_tickets !== "") winning_tickets = winning_tickets + " - ";
       winning_tickets = winning_tickets + text.winning_ticket.replace(":", Math.floor(Math.random()*10000)).replace("*", participants[key].name);
     });
   } else {
     winning_tickets = text.no_winners;
   }
-  console.log(winning_tickets)
   $("#winner").html(winning_tickets);
+
+  reactions(winners);
 });
 
 
@@ -233,4 +234,15 @@ const draw_winners = function() {
   return res;
 }
 
+
+const reactions = function(winners) {
+  console.log(winners)
+  if (winners.length > 0) {
+    const thankful_player = Math.floor(Math.random()*winners.length);
+    const thank_sentence = text.thanks[Math.floor(Math.random()*text.thanks.length)];
+
+    $("#"+winners[thankful_player] + "_thanks_txt").html(thank_sentence);
+    $("#"+winners[thankful_player] + "_thanks_txt").addClass("text_display");
+  }
+}
 // Reseting the round

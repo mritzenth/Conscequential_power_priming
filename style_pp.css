@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
 #power_priming {
   display: flex;
   flex-direction: column;
@@ -69,6 +70,8 @@
   display: flex;
   justify-content: center;
   margin: 20px auto;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -78,6 +81,7 @@
   box-shadow: #422800 4px 4px 0 0;
   color: #422800;
   height: 40px;
+  max-width: 350px;
 }
 
 #validate_btn:hover {
@@ -114,3 +118,26 @@
   }
 }
 
+#winner {
+  padding: 20px;
+  text-align: center;
+}
+
+.thanks_text {
+  width: 248px;
+  position: absolute;
+  text-align: center;
+  margin: -80px;
+  background-color: #fff;
+  border: #000;
+  border-style: solid;
+  font-family: 'Long Cang', cursive;
+  line-height: 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.text_display {
+  opacity: 1;
+}
