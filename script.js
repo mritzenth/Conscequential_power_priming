@@ -2,7 +2,7 @@
 $("#answer477133X3X27").hide();
 
 let round = 1;
-const nb_of_rounds = 5;
+const nb_of_rounds = 3;
 let free_ticket = 7;
 let participants = new Object();
 let text;
