@@ -266,7 +266,7 @@ const new_round = function(win_nmb) {
   setTimeout(function() {
     $(".thanks_text").removeClass("text_display");
     $("#winner").html("");
-    if (round < nb_of_rounds) {
+    if (round <= nb_of_rounds) {
       create_round();
     } else {
       $("#round_infos").html("");
