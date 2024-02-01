@@ -10,6 +10,7 @@
 
 #players {
   display: flex;
+  flex-flow: wrap;
   justify-content: space-around;
 }
 
@@ -124,7 +125,7 @@
 }
 
 .thanks_text {
-  width: 248px;
+  width: 33%;
   position: absolute;
   text-align: center;
   margin: -80px;
